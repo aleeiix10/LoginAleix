@@ -9,15 +9,22 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>LOGIN</h1>
     <form method="post">
         <label for="user"> Usuari:</label>
         <input type="text" id ="user"><br><br>
         <label for="pass"> Password:</label>
         <input type="password" id ="pass">
-        <button onclick="comprovarUsuario()">Enviar</button>
+        <button onclick="comprovarUsuario();return false">Enviar</button>
     </form>
-    <p id="pU"></p>
-    <p id="pP"></p>
+    <h1>REGISTER</h1>
+    <form method="post">
+        <label for="user"> Usuari:</label>
+        <input type="text" id ="userRegister"><br><br>
+        <label for="pass"> Password:</label>
+        <input type="password" id ="passRegister">
+        <button onclick="newUser(); return false">Enviar</button>
+    </form>
     
 </body>
 </html>

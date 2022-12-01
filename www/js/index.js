@@ -27,13 +27,13 @@ function onDeviceReady() {
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
 }
+let usersPass = {
+    "aleix" : "123",
+    "aleix2": "456",
+    "aleix3": "890"
+};
 
 function comprovarUsuario() {
-    let usersPass = {
-        "aleix" : "123",
-        "aleix2": "456",
-        "aleix3": "890"
-    };
     let user = document.getElementById("user").value;
     let pass = document.getElementById("pass").value;
     let users = Object.keys(usersPass);
@@ -48,4 +48,10 @@ function comprovarUsuario() {
     }else{
         alert("Usuari correcte")
     }
+}
+function newUser() {
+    let user = document.getElementById("userRegister").value;
+    let pass = document.getElementById("passRegister").value;
+    usersPass[user] = pass;
+    alert("Usuario añadido correctamente");
 }
